@@ -1,3 +1,4 @@
+
 """
 Given a non-negative int n, return the sum of its digits recursively (no loops). Note that mod (%)
 by 10 yields the rightmost digit (126 % 10 is 6), while divide (/) by 10 removes the rightmost digit
@@ -67,13 +68,33 @@ been replaced by "3.14"."""
 """Given a string that contains a single pair of parenthesis, compute recursively a new string made
 of only of the parenthesis and their contents, so "xyz(abc)123" yields "(abc)"."""
 
-def parenBit(s):
-    if s[0]=="(":
-        if s[-1]==")":
-            return s
-        else:
-            return parenBit(s[:-1])
-    return parenBit(s[1:])
-print(parenBit("xyz(abc)123"))
-print(parenBit("x(hello)"))
-print(parenBit("(xy)1"))
+# def parenBit(s):
+#     if s[0]=="(":
+#         if s[-1]==")":
+#             return s
+#         else:
+#             return parenBit(s[:-1])
+#     return parenBit(s[1:])
+# print(parenBit("xyz(abc)123"))
+# print(parenBit("x(hello)"))
+# print(parenBit("(xy)1"))
+
+
+"""Given a string and a non-empty substring sub, compute recursively if at least 'n' copies of sub
+appear in the string somewhere, possibly with overlapping. 'n' will be non-negative."""
+
+# def strCopies(string, sub, n):
+#     if n==0:
+#         return True
+#     if len(sub)>len(string):
+#         return False
+#     else:
+#         if string[0:len(sub)]==sub:
+#             return strCopies(string[len(sub):], sub, n-1)
+#         else:
+#             return strCopies(string[1:], sub, n)
+# print(strCopies("catcowcat", "cat", 2))
+# print(strCopies("catcowcat", "cow", 2))
+# print(strCopies("catcowcat", "cow", 1))
+# print(strCopies("pewds", "wd", 1))
+
